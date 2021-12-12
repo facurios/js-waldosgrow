@@ -1,9 +1,3 @@
-const alert = ()=>{
-    Swal.fire({
-    title:'Bienvenido'
-})
-}
-
 const alertCompra = ()=>{
     Swal.fire({
         icon: 'success',
