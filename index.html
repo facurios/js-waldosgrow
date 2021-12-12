@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="ENTRE_RIOS,  ADITIVO, FERTILIZANTE, ACCESORIOS, ILUMINACION, GROW">
     <meta name="description"
@@ -46,7 +47,7 @@
                 <div id="saludo" class=""></div>
                 <!--Boton Modales-->
                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#contenedor-carrito">
-                    Carrito <span id="contadorCarrito">0
+                    <img src="imagenes/carrito.png" style="width:25px" alt=""> <span class="badge bg-secondary" id="contadorCarrito">0</span>
                 </button>
                 <button type="button" class="btn visually-hidden" data-bs-toggle="modal" id="logout">
                     Logout
@@ -125,7 +126,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="userPass" class="form-label">Password</label>
-                                    <input type="text" class="form-control" id="userPass" placeholder="Password" required >
+                                    <input type="password" class="form-control" id="userPass" placeholder="Password" required >
                                 </div>
                                 <button type="submit" id="login" class="btn btn-success">Ingresar</button>
                             </form>
@@ -184,9 +185,19 @@
                 </div>
             </div>
         </div>
+        <!--Modal Descripcion de Productos-->
+        <div class="modal" tabindex="-1" id="modal-producto">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content"id="detalleProd">
+                
+              </div>
+            </div>
+          </div>
         <section class="container-fluid">
+            <!--Botones escondidos-->
             <button type="button" class="btn" style="display: none;" data-bs-toggle="modal" data-bs-target="#registro" id="btnModalEegistro"></button>
-
+            <button type="button" class="btn" style="display: none;" data-bs-toggle="modal" data-bs-target="#modal-producto" id="btnModalProductos"></button>
+            <button id="alertAgregado" style="display: none;"></button>
             <!--Banner Principal-->
             <div class="row">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -311,8 +322,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
         integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
         crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/sweetAlert.js"></script>
     <script src="js/users.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app.js"></script> 
+    
+    
 </body>
 
 </html>

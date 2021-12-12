@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Producto 1",
         "tipo": "Parafernalia",
-        "desc": "El mejor papel",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1200,
         "img": "./imagenes/productos/accesorios1.png"
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "nombre": "Producto 2",
         "tipo": "Aditivos",
-        "desc": "Para tu plantita",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1100,
         "img": "./imagenes/productos/aditivo1.jpg"
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "nombre": "Producto 3",
         "tipo": "Iluminacion",
-        "desc": "Los mejores accesorios",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1200,
         "img": "./imagenes/productos/iluminacion1.jpg"
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "nombre": "Producto 4",
         "tipo": "Combos",
-        "desc": "El mejor papel",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1400,
         "img": "./imagenes/productos/combo1.jpg"
     },
@@ -35,87 +35,87 @@
         "id": 5,
         "nombre": "Producto 5",
         "tipo": "Sustratos",
-        "desc": "Para tu plantita",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1200,
         "img": "./imagenes/productos/sustrato1.jpg"
     },
     {
         "id": 6,
-        "nombre": "Producto 1",
+        "nombre": "Producto 6",
         "tipo": "Parafernalia",
-        "desc": "El mejor papel",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1200,
         "img": "./imagenes/productos/accesorios1.png"
     },
     {
         "id": 7,
-        "nombre": "Producto 2",
+        "nombre": "Producto 7",
         "tipo": "Aditivos",
-        "desc": "Para tu plantita",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1100,
         "img": "./imagenes/productos/aditivos2.png"
     },
     {
         "id": 8,
-        "nombre": "Producto 3",
+        "nombre": "Producto 8",
         "tipo": "Iluminacion",
-        "desc": "Los mejores accesorios",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1200,
         "img": "./imagenes/productos/iluminacion2.jpg"
     },
     {
         "id": 9,
-        "nombre": "Producto 4",
+        "nombre": "Producto 9",
         "tipo": "Combos",
-        "desc": "El mejor papel",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1400,
         "img": "./imagenes/productos/combo2.png"
     },
     {
         "id": 10,
-        "nombre": "Producto 5",
+        "nombre": "Producto 10",
         "tipo": "Sustratos",
-        "desc": "Para tu plantita",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1200,
         "img": "./imagenes/productos/sustrato2.jpg"
     },
     {
         "id": 11,
-        "nombre": "Producto 1",
+        "nombre": "Producto 11",
         "tipo": "Parafernalia",
-        "desc": "El mejor papel",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1200,
         "img": "./imagenes/productos/accesorios5.png"
     },
     {
         "id": 12,
-        "nombre": "Producto 2",
+        "nombre": "Producto 12",
         "tipo": "Aditivos",
-        "desc": "Para tu plantita",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1100,
         "img": "./imagenes/productos/aditivos2.png"
     },
     {
         "id": 13,
-        "nombre": "Producto 3",
+        "nombre": "Producto 13",
         "tipo": "Iluminacion",
-        "desc": "Los mejores accesorios",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1200,
         "img": "./imagenes/productos/iluminacion1.jpg"
     },
     {
         "id": 14,
-        "nombre": "Producto 4",
+        "nombre": "Producto 14",
         "tipo": "Combos",
-        "desc": "El mejor papel",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1400,
         "img": "./imagenes/productos/combo3.jpg"
     },
     {
         "id": 15,
-        "nombre": "Producto 5",
+        "nombre": "Producto 15",
         "tipo": "Sustratos",
-        "desc": "Para tu plantita",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis unde quibusdam ratione rerum quia, odio quidem eveniet officiis aliquam",
         "precio": 1200,
         "img": "./imagenes/productos/sustrato3.jpg"
     }

@@ -5,21 +5,28 @@ function mostrarProductos(filtro) {
     if (filtro === "all") {
         $("#tituloProductos").text(`Nuestros Productos`)
       array = response;
-      console.log(array);
     } else {
       $("#tituloProductos").text(`${filtro}`)
       array = response.filter((prod) => prod.tipo === filtro);
     }
-    console.log(array);
     array.forEach((dato) => {
       $("#areaProductos").append(
         `
             <div class="card tarjetas productos" style="width:12rem; display:none">
                 <img src=${dato.img} alt="" style="">
                 <h4 class="productos__text--chico" style="">${dato.nombre}</h4>
-                <p>${dato.desc}</p>
-                <p class="precioProducto">Precio: $${dato.precio}</p>
+                <div class="detalle2">
+                    <p class="detalle" style="background-color: black; higth:50px">${dato.desc}</p>
+                </div>
+                <div class="productos__texto--grande" style="margin-top: 15px">
+                  <p class="precioProducto">Precio: $${dato.precio} </p>
+                </div>
+                
+                <div>
                 <button onclick="agregarAlCarrito(${dato.id})" class="btn btn-success productos__text--button">Agregar <i class="fas fa-shopping-cart"></i></button>
+                <button onclick="modalProd(${dato.id})" class="btn btn-primary productos__text--button">Detalle <i class="fas fa-shopping-cart"></i></button>
+                </div>  
+                
             </div>`
       );
       $("#areaProductos div").fadeIn("slow");
@@ -36,7 +43,6 @@ function carritoVacio(){
   }else{
     btncomprar.classList.add('disabled')
     $('#mensaje').text ('')
-    $('#mensaje').text (`El carrito esta vacio`)
   }
 } 
 
@@ -81,22 +87,16 @@ const actualizarCarrito = () => {
   carrito.forEach((prod) => {
           const div = document.createElement("tr");
           div.innerHTML = `
-                                  <td scope="row" style="height:30%">1</td>
+                                  <td scope="row" ><img style="width: 40%"src="${prod.img}"</img></td>
                                   <td>${prod.nombre}</td>
                                   <td>${prod.cantidad}</td>
                                   <td>
-                                      <button onclick="cantidadProductos(${
-                                      prod.id
-                                      },-1)" class="btn btn-danger btn-sm">-</button>
-                                      <button onclick="cantidadProductos(${
-                                      prod.id
-                                      },1)" class="btn btn-primary btn-sm">+</button>
+                                      <button onclick="cantidadProductos(${prod.id},-1)" class="btn btn-danger btn-sm">-</button>
+                                      <button onclick="cantidadProductos(${prod.id},1)" class="btn btn-primary btn-sm">+</button>
                                   </td>    
                                   <td>${prod.precio*prod.cantidad}</td>
-                                  <td><button onclick="eliminarCarrito(${
-                                  prod.id
-                                  })" class="btn btn-danger btn-sm">x</button></td>
-                              `;
+                                  <td><button onclick="eliminarCarrito(${prod.id})" class="btn btn-danger btn-sm">x</button></td>
+                              `
 
           contenedorCarrito.appendChild(div);
   });
@@ -115,7 +115,6 @@ const agregarAlCarrito = (prodId) => {
     let contador = 1;
     const item = response.find((prod) => prod.id === prodId);
     const consulta = carrito.find((prod) => prod.id === prodId);
-    console.log(item);
     if (consulta === undefined) {
       carrito.push(
         {
@@ -126,10 +125,11 @@ const agregarAlCarrito = (prodId) => {
         img: item.img,
         desc:item.desc
       });
+      alertaCompra.click()
       localStorage.setItem("carrito", JSON.stringify(carrito));
     } else {
+      alertaCompra.click()
       let index = carrito.findIndex((prod) => prod.id === prodId);
-      console.log(index);
       cantidadProductos(prodId, 1);
     }
     actualizarCarrito();
@@ -229,5 +229,40 @@ let filtro = "all";
 mostrarProductos(filtro);
 
 
+//====Modal Producto=====
+const btnProd = document.getElementById('btnModalProductos')
+const prod = document.getElementById('detalleProd')
+const footer =document.getElementById('detalleProdFooter')
+const modalProd = (prodId)=>{
+  $.get("./json/productos.json", (response) => {
+  const producto = response.find((prod) => prod.id === prodId)
+  detalleProd.innerHTML = `
+        <div class="modal-header">
+        <h5 class="modal-title">Detalle del Producto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row" >
+              <div class="col-md-5" style="text-align: center; border: solid 1px" ><img src="${producto.img}" style="width:200px" alt=""></div>
+              <div class="col-md-7" style="border:solid,black" >
+                  <div class="row" style="text-align: center;" ><h2>${producto.nombre}</h2>  </div>
+                  <div class="row" style=" text-align: left;margin-top: 15px"><p><strong>Descripción:</strong></p> </div>
+                  <div class="row" style=" text-align: justify;margin-top: 1px"><p>${producto.desc}</p> </div>
+                  <div class="row display-6" style="text-align: center; margin-top: 30px;"><p>Precio: $${producto.precio}</p> </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer" id="detalleProdFooter">
+            <button onclick="agregarAlCarrito(${producto.id})" class="btn btn-success productos__text--button">Agregar <i class="fas fa-shopping-cart"></i></button>
+        </div>
+                          
+         `
+btnProd.click()
+  })
+}
+const alertaCompra = document.getElementById('alertAgregado')
+alertaCompra.addEventListener('click', ()=>{
+  alertCompra()
+})
 
 

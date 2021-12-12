@@ -62,10 +62,8 @@ const loginError = document.getElementById("login-error");
 
 //===Eventos de Login===
 userName.addEventListener("change", () => {
-  console.log(userName.value);
 });
 userPass.addEventListener("change", () => {
-  console.log(userPass.value);
 });
 
 //===Login de Usuario registrado===
@@ -73,9 +71,7 @@ formLogin.addEventListener("submit", (event) => {
   event.preventDefault();
   
     const valor = users.find(
-      (elemento) => elemento.nickname === userName.value
-    );
-    console.log(valor);
+      (elemento) => elemento.nickname === userName.value)
     if (valor == undefined) {
         loginError.innerHTML = `<p>Usuario y/o contraseña incorrecta</p>`
         formLogin.reset();
